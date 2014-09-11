@@ -15,7 +15,7 @@ func main() {
     fmt.Println("The time is", t)
 
     rand.Seed(s)
-    a, b, c := sum(rand.Intn(5) + 1, rand.Intn(5) + 1)
+    var a, b, c int = sum(rand.Intn(5) + 1, rand.Intn(5) + 1)
     fmt.Println("I will roll two dice ... their values are", a, "and", b, "... their sum is", c)
 }
 
