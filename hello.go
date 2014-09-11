@@ -12,9 +12,10 @@ func main() {
     fmt.Println("The time is", time.Now())
 
     rand.Seed(time.Now().Unix())
-    fmt.Println("I will roll two dice... the sum of the dice are", sum(rand.Intn(6), rand.Intn(6)))
+    a, b, c := sum(rand.Intn(5) + 1, rand.Intn(5) + 1)
+    fmt.Println("I will roll two dice ... their values are", a, "and", b, "... their sum is", c)
 }
 
-func sum(x int, y int) int {
-    return x + y
+func sum(x int, y int) (int, int, int) {
+    return x, y, x + y
 }
