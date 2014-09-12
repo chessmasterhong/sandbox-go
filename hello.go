@@ -6,6 +6,8 @@ import (
     "math/rand"
 )
 
+const PI float32 = 3.14
+
 var t time.Time = time.Now()
 var s int64 = t.Unix()
 
@@ -17,6 +19,8 @@ func main() {
     rand.Seed(s)
     var a, b, c int = sum(rand.Intn(5) + 1, rand.Intn(5) + 1)
     fmt.Println("I will roll two dice ... their values are", a, "and", b, "... their sum is", c)
+
+    fmt.Println("Happy", PI, "Day!")
 }
 
 func sum(x int, y int) (int, int, int) {
