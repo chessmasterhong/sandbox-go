@@ -28,20 +28,28 @@ func main() {
 //        fmt.Println(i, "bottles of beer on the wall,", i, "bottles of beer. Take one down pass it around,", i - 1, "bottles of beer on the wall.")
 //    }
     
-    for i := 1; i <= 100; i++ {
-        fmt.Printf(strconv.Itoa(i) + " ")
-
-        if i % 3 == 0 {
-            fmt.Printf("Fizz")
-        }
-        if i % 5 == 0 {
-            fmt.Printf("Buzz")
-        }
-
-        fmt.Printf("\n")
-    }
+    FizzBuzz(100)
 }
 
 func sum(x int, y int) (int, int, int) {
     return x, y, x + y
+}
+
+func FizzBuzz(n int) {
+    if n == 0 {
+        return
+    }
+
+    FizzBuzz(n - 1)
+
+    fmt.Printf(strconv.Itoa(n) + " ")
+
+    if n % 3 == 0 {
+        fmt.Printf("Fizz")
+    }
+    if n % 5 == 0 {
+        fmt.Printf("Buzz")
+    }
+
+    fmt.Printf("\n")
 }
