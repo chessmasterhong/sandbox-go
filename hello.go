@@ -22,6 +22,10 @@ func main() {
 
     var pi float64 = float64(int(pi * 100)) / 100
     fmt.Println("Happy", pi, "Day!")
+
+    for i := 10; i > 0; i-- {
+        fmt.Println(i, "bottles of beer on the wall,", i, "bottles of beer. Take one down pass it around,", i - 1, "bottles of beer on the wall.")
+    }
 }
 
 func sum(x int, y int) (int, int, int) {
